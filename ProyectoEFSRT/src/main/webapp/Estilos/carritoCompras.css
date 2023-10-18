@@ -1,0 +1,73 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+.botones-cantidad{
+    display: flex;
+    gap: 5px;
+}
+.input-cantidad{
+    width: 50px;
+    text-align: center;
+}
+.mb-3 input{
+    text-align: center;
+    font-weight: bold;
+}
+
+/*ANIMACION PAGO LETRA*/ 
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.processing-title {
+    animation: fadeInOut 2s infinite;
+}

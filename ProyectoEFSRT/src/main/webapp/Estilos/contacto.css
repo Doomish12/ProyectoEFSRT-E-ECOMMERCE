@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Quicksand', sans-serif;  
+    background-color: var(--blanco);
+    color: black;
+}
+:root{
+    --blanco : #f4fefd;
+    --negro : #0b0c0e;
+    --verde : #0ef6cc;
+    --azul :#5F7ADB;
+    --plomo: #121010;
+    --plo: rgb(31, 30, 30);
+    --rojo : #f65151;
+    --body: #0c0b0b;
+}
+
+
+.main-contacto{
+  
+}
+.cont-habilidades {
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+    padding: 40px;
+    margin-top: 2rem;
+    box-shadow: -1px 0px 11px 1px rgb(0, 0, 0);
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+    position: relative; /* Añadimos posición relativa para poder usar el pseudo-elemento ::before */
+}
+
+.cont-habilidades::before {
+    content: ""; /* Necesario para mostrar el pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../Imagenes/Contacto/bg-index.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    border-radius: 20px;
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+    animation: anime 5s linear infinite;
+}
+
+@keyframes anime {
+    0% {
+        filter: hue-rotate(0deg) brightness(0.4); /* Sin rotación ni cambio de brillo */
+    }
+    50% {
+        filter: hue-rotate(180deg) brightness(0.4); /* Mitad de la rotación y brillo reducido */
+    }
+    100% {
+        filter: hue-rotate(360deg) brightness(0.4); /* Rotación completa y brillo restaurado */
+    }
+}
+
+.contenedor-contacto{
+    background-color: black;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    box-shadow: -1px 0px 11px 1px rgb(11, 11, 11);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding: 40px;
+
+}
+
+.formulario-section{
+    display: grid;
+    margin: 0;
+    line-height: 2rem;
+    font-weight: bold;
+}
+.formulario-section h1,p{
+    color: var(--blanco);
+      margin-bottom: 20px;
+}
+.acerca-l2{
+    color: var(--rojo);
+    font-size: 3rem;
+}
+.acerca-l{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+form{
+    display: grid;
+    align-items: center;
+    gap: 20px;
+}
+form input{
+    width: 400px;
+    height: 50px;
+    background-color: var(--blanco);
+    border-radius: 20px;
+    padding: 10px;
+}
+form textarea{
+    width: 400px;
+    height: 150px;
+    background-color: var(--blanco);
+    border-radius: 20px;
+    border:  2px solid;
+    padding: 10px;
+}
+.boton-co{
+    width: 250px;
+    height: 50px;
+    background-color: rgb(110, 110, 255);
+    color: var(--blanco);
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+}
+
+
+.grid-section{
+    display: grid;
+    justify-content: center;
+    gap: 70px;
+}
+.color-icon {
+    color: var(--rojo);
+    transition: all 3s ease;
+}
+
+.img-cont{
+
+    animation: conta 3s ease-out infinite;
+}
+
+@keyframes conta {
+    0% {
+        transform: scale(1, 1) rotate(0deg);
+      }
+      25% {
+        transform: scale(0.85, 0.85) rotate(5deg);
+      }   
+    50% {
+        transform: scale(0.85, 0.85) rotate(-5deg);
+      }
+}
+label{
+    color: var(--rojo);
+}
+.color-label{
+    color: var(--verde);
+    font-size: 1.1rem;
+ 
+}
+
+.form-control {
+    position: relative;
+  }
+  
+
+  input.valid, textarea.valid {
+    border: 5px solid rgb(87, 227, 87); /* Cambiar el borde a verde cuando es válido */
+  }
+  .marg-iconos{
+    margin: 2rem;
+    
+  }
+  .efecto{
+    transition: all 1s ease;
+  }
+  .efecto:hover{
+          transition: all 1s ease;
+        scale: 1.5;
+  }
+
+
+
+/*? RESPONSIVO */
+
+
+  @media (max-width: 940px ) {
+    .cont-habilidades::before {
+        background-image: url(../imagenes/programdor.webp);
+    }
+    .contenedor-contacto{
+        height: auto;
+        display: flex;
+    }
+  
+    .formulario-section h1{
+        line-height: 1.3rem;
+        text-align: center;
+    }
+    .formulario-section p{
+      font-size: 0.9rem;
+      padding: 10px;
+      text-align: justify;
+    }
+    .acerca-l2{
+  
+        font-size: 2.2rem;
+    }
+    .acerca-l{
+        font-size: 2rem;
+   
+    }
+    form{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    form input{
+        width: auto;
+        height: 50px;
+    }
+    form textarea{
+        width: auto;
+        height: 150px;
+     
+    }
+  
+    .grid-section{
+        gap: 70px;
+    }
+ 
+    .img-cont{
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 670px) {
+    .cont-habilidades::before {
+        background-image: url(../imagenes/programdor.webp);
+    }
+    .contenedor-contacto{
+        height: auto;
+        display: grid;
+    }
+  
+    .formulario-section h1{
+        line-height: 1.3rem;
+        text-align: center;
+    }
+    .formulario-section p{
+      font-size: 0.9rem;
+      padding: 10px;
+      text-align: center;
+   
+    }
+    .acerca-l2{
+  
+        font-size: 2.2rem;
+    }
+    .acerca-l{
+        font-size: 2rem;
+   
+    }
+    form{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    form input{
+        width: auto;
+        height: 50px;
+    }
+    form textarea{
+        width: auto;
+        height: 150px;
+     
+    }
+  
+    .grid-section{
+        gap: 0px;
+    }
+
+    .img-cont{
+      width: 300px;
+    }
+    }
+  
+    .marcar-contacto{
+      background-color: var(--azul);
+  
+      box-shadow: -1px 0px 11px 1px rgb(255, 255, 255);
+    }
+
+  @media (max-width: 480px) {
+    .cont-habilidades::before {
+        background-image: url(../imagenes/programdor.webp);
+    }
+    .cont-habilidades{
+        padding: 25px;
+    }
+  .contenedor-contacto{
+      height: auto;
+      display: grid;
+    padding: 15px;
+  }
+
+  .formulario-section h1{
+      line-height: 1.3rem;
+      text-align: center;
+  }
+  .formulario-section p{
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+  }
+  .acerca-l2{
+
+      font-size: 2.2rem;
+  }
+  .acerca-l{
+      font-size: 2rem;
+ 
+  }
+  form{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+  }
+  form input{
+      width: auto;
+      height: 50px;
+  }
+  form textarea{
+      width: auto;
+      height: 150px;
+   
+  }
+
+  .grid-section{
+      gap: 0px;
+  }
+
+  .img-cont{
+    width: 300px;
+  }
+
+  }
+
+  .marcar-contacto{
+    background-color: var(--azul);
+
+    box-shadow: -1px 0px 11px 1px rgb(255, 255, 255);
+  }
+
+

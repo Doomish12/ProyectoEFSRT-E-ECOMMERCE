@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+   version="4.0">
+      
+  <!-- Configuración para manejar solicitudes multipartes -->
+    <servlet>
+        <servlet-name>ServletInsertarImg</servlet-name>
+        <servlet-class>Controller.ServletInsertarImg</servlet-class>
+        <multipart-config>
+            <!-- Establece el tamaño máximo del archivo que se puede cargar (en bytes) -->
+            <max-file-size>1048576</max-file-size> <!-- 1 MB, puedes ajustarlo según tus necesidades -->
+            <!-- Establece el tamaño máximo del request (en bytes) -->
+            <max-request-size>2097152</max-request-size> <!-- 2 MB, puedes ajustarlo según tus necesidades -->
+            <!-- Establece el tamaño máximo del archivo en memoria (en bytes) -->
+            <file-size-threshold>0</file-size-threshold>
+        </multipart-config>
+    </servlet>
+
+    <!-- Mapeo del servlet de insertar producto -->
+    <servlet-mapping>
+        <servlet-name>ServletInsertarImg</servlet-name>
+        <url-pattern>/insertar</url-pattern>
+    </servlet-mapping>
+    
+
+    
+</web-app>
