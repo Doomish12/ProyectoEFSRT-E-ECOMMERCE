@@ -23,8 +23,8 @@ jobs:
 
       - name: Build with Maven
         run: |
-    cd ${{ github.workspace }}
-    mvn clean install
+          cd ProyectoEFSRT  # Navega al directorio del proyecto
+          mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
